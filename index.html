@@ -1,6 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-    <body>
-        <h1>Nagare home</h1>
-    </body>
-</html>
+<head>
+    <title>Nagare: Web Python Framework</title>
 
+    <script src="js/yahoo-dom-event.js"></script>
+    <script src="js/element-min.js"></script>
+    <script src="js/event-mouseenter-min.js" ></script>
+    <script src="js/animation-min.js"></script>
+    <script src="js/carousel-min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/reset-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/application.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+</head>
+
+<body class="yui-skin-sam">
+    <div id="body">
+        <div id="body_background">
+            <img id="logo" src="img/logo.png">
+
+            <div id="content">
+                <div id="main">
+                    <div id="slider_block">
+                        <img id="prev" src="img/slide_left.gif">
+                        <div id="slider">
+                            <ol>
+                                <li><a href="/doc/features">Open-Source Python framework for web application development</a></li>
+                                <li><a href="/portal"><div>Switch on the demo</div><img src="img/switch.jpg"></a></li>
+				<li><a href="/trac/wiki/WhoUsesNagare">&acute;&acute;Powered by nagare&acute;&acute;<img src="img/power.jpg"><br/>&nbsp;&nbsp;&nbsp;Who uses nagare?</a></li>
+                            </ol>
+                        </div>
+                        <img id="next" src="img/slide_right.gif">
+                    </div>
+                </div>
+            </div>
+
+            <div id="_body">
+                <ul>
+                    <li class="first">
+                        <h1>Quick start</h1>
+                        <a href="/doc/quickstart">Create</a> your first nagare application
+                    </li>
+                    <li>
+                        <h1>Get it now!</h1>
+                        <a href="/doc/framework_installation">Download</a> the latest 0.4.1 stable release
+                    </li>
+                    <li>
+                        <h1>Tutorial</h1>
+                        <a href="/doc/tutorial1">Understand</a> the nagare concepts
+                    </li>
+                </ul>
+                <hr/>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <table>
+            <tr>
+                <th>About</th>
+                <th>Community</th>
+                <th class="last">Learn</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li><a href="/doc/description">Description</a></li>
+                        <li><a href="/doc/features">Features</a></li>
+                        <li><a href="/trac/wiki/WhoUsesNagare">Who uses Nagare?</a></li>
+                        <li><a href="/doc/license">License</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li><a href="http://github.com/nagareproject">Github repositories</a></li>
+                        <li><a href="/trac/blog">Blogs</a></li>
+                        <li><a href="http://groups.google.com/group/nagare-users">Mailing list</a></li>
+                    </ul>
+                </td>
+                <td class="last">
+                    <ul>
+                        <li><a href="/doc">Documentation</a></li>
+                        <li><a href="/portal">Demonstrations portal</a></li>
+                        <li><a href="/demo">Demonstrations</a></li>
+                        <li><a href="/wiki">Wiki Tutorial</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        YAHOO.util.Event.onContentReady("slider", function (ev) {
+        var slider = new YAHOO.widget.Carousel("slider", {
+                         numVisible: 1,
+                         isCircular: true,
+                         autoPlayInterval: 5000,
+                         animation: { speed: 1 },
+                         navigation: { prev: 'prev', next: 'next' }
+                     });
+
+        slider._prevEnabled = slider._nextEnabled = false;
+
+        slider.render();
+        slider.startAutoPlay();
+        slider.show();
+
+        YAHOO.util.Event.on("slider_block", "mouseenter", function (e) {
+            YAHOO.util.Dom.setStyle(["prev", "next"], "display", "block");
+        });
+
+        YAHOO.util.Event.on("slider_block", "mouseleave", function (e) {
+            YAHOO.util.Dom.setStyle(["prev", "next"], "display", "none");
+        });
+            })
+    </script>
+</body>
+</html>

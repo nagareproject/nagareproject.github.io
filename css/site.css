@@ -1,0 +1,113 @@
+body {
+    font-size: 17px;
+    background: none
+}
+
+a {
+    color: #3f7516;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#body_background {
+    margin: 0;
+    padding-bottom: 90px;
+    background: url(/static/nagare/img/sakura.jpg) no-repeat 150px bottom;
+}
+
+#main { margin-top: 0 }
+
+#footer { color: white }
+
+#slider_block {
+    width: 614px;
+    height: 262px;
+}
+
+#prev {
+    display: none;
+    cursor: pointer;
+    margin: 23px 0 0 10px;
+    position: absolute;
+}
+
+#next {
+    display: none;
+    float: right;
+    cursor: pointer;
+    margin-top: 23px;
+}
+
+#slider {
+    width: 550px!important;
+    height: 262px;
+    border: 0;
+    font: normal 39px "DistrictThinRegular";
+    margin-left: 37px;
+    position: absolute;
+}
+
+#slider a {
+    display: block;
+    width: 550px;
+    height: 175px;
+    color: #4e4e4e;
+    font: normal 39px "DistrictThinRegular";
+}
+
+#slider ol li div {
+    float: left;
+    margin-top: 30px;
+}
+
+#slider ol li img { float: right }
+
+.yui-skin-sam .yui-carousel-nav {
+    padding-left: 0;
+    margin-left: 0;
+    background-image: none;
+    display: inline-block;
+}
+
+.yui-skin-sam .yui-carousel-nav ul { margin: 0px 0 0 260px }
+#main #slider ul { padding: 0 }
+.yui-skin-sam .yui-carousel-nav ul li {
+    width: 7px;
+    height: 7px;
+    background: url(../img/slide_off.gif);
+}
+.yui-carousel-nav ul li.yui-carousel-nav-page-selected { background: url(../img/slide_on.gif) }
+
+.yui-carousel-element li {
+    border: 0px!important;
+    text-align: left;
+    margin-left: 0;
+    padding-top: 25px;
+}
+.yui-carousel-element .yui-carousel-item-selected {
+    border: 0;
+    outline: none!important;
+}
+
+#_body ul {
+    clear: both;
+}
+#_body ul h1 {
+    font: bold 23px "arial";
+    color: #4e4e4e;
+    border: 0
+}
+#_body ul li {
+    list-style-type: none;
+    margin: 25px 0 0 97px;
+    width: 180px;
+    float: left;
+}
+#_body ul li.first { margin-left: 0 }
+#_body hr {
+    clear: both;
+    width: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
